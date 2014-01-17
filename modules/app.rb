@@ -1,7 +1,18 @@
 class App < Sinatra::Base
   get '/' do
-    content_type 'json'
+    slim :index
+  end
 
-    { test: 'success' }.to_json
+  get '/css/*.css' do |file|
+    content_type :css
+    begin
+      scss file.to_sym,
+        syntax: :scss,
+        line_numbers: true,
+        style: :expanded,
+        load_paths: ['views/styles']
+    rescue Errno::ENOENT
+      status 404
+    end
   end
 end
