@@ -1,5 +1,11 @@
 class App < Sinatra::Base
   get '/' do
+    @css_path = "css/main.css"
+    @js_modernizr_path =  "js/lib/modernizr-2.6.2.custom.js"
+    @js_zepto_path =  "js/lib/zepto.js"
+    @js_path =  "js/shft.js"
+    @js_env =  "development"
+    @js_url =  "http://0.0.0.0:9000/"
     slim :index
   end
 
