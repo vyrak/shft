@@ -1,3 +1,26 @@
 vendor/bundle
 .bundle
 .DS_Store
+
+
+npm-debug.log
+
+## Build Files
+public/css/main*
+public/scripts/build/
+public/scripts/shft*
+public/scripts/lib/modernizr*.min.js
+
+## Third-party modules
+node_modules
+
+## Local Config
+config.json
+
+## Project Files
+*.sublime-*
+_local-notes
+_reference
+
+## SASS files
+.sass-cache
