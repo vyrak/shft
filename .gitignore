@@ -7,7 +7,7 @@ npm-debug.log
 
 ## Build Files
 public/css/main*
-build/
+public/scripts/build/
 public/scripts/shft*
 public/scripts/lib/modernizr*.min.js
 
