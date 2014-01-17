@@ -11,6 +11,5 @@ gem 'sass-css-importer'
 
 group :development do
   gem 'dotenv'
-  gem 'grunt'
   gem 'foreman'
 end
