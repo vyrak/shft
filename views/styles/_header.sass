@@ -3,14 +3,14 @@
 
 header.bar-title
   height: $header_h
-  background: #1a1a1a
+  background: rgb(0,255,151)
   border: none
   border-bottom: 1px solid $header_yellow
 
   .logo
-    $logo_padding: 21px
-    width: 150px
-    height: 12px + $logo_padding
+    $logo_padding: 3px
+    width: 61px  // 251/150 = x/37
+    height: 37px + $logo_padding
     display: inline-block
     padding-top: $logo_padding
 
@@ -21,15 +21,37 @@ header.bar-title
     padding: 0
     padding: 0 8px
 
-    img
-      width: 37px
-      height: 27px
-
     &:active
       background: none
 
+  .round-icon
+    border: 3px solid white
+    +border-radius(20px)
+    width: 36px
+    height: 36px
+
+  .bubble
+    background-color: rgb(255,164,119)
+    position: absolute
+    top: 0
+    right: 0
+    margin-top: 5px
+    margin-right: 4px
+    img
+      width: 9px
+      height: 18px
+      display: block
+      margin-top: 5px
+      margin-left: 2px
+
   .main-menu
-    padding-top: 8px
+    background-color: rgb(107,201,255)
+    img
+      width: 18px
+      height: 18px
+      display: block
+      margin-top: 6px
+      margin-left: -2px
 
   .tap-to-close
     display: none
