@@ -6,11 +6,10 @@ class App < Sinatra::Base
   get '/css/*.css' do |file|
     content_type :css
     begin
-      scss file.to_sym,
-        syntax: :scss,
+      scss :"styles/#{file}",
+        syntax: :scsss,
         line_numbers: true,
-        style: :expanded,
-        load_paths: ['views/styles']
+        style: :expanded
     rescue Errno::ENOENT
       status 404
     end
