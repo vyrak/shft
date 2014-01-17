@@ -1,2 +1,17 @@
-#container
-  ' hello world
+body
+  section
+    header class="bar-title"
+    div id="header-spacer"
+    article class="content"
+  aside id="aside-left"
+  aside id="aside-right"
+
+  script src="#{@js_zepto_path}"
+  script src="#{@js_path}"
+  javascript:
+    $(function() {
+      Shft.start({
+        environment: "#{@js_env}",
+        url: "#{@js_url}"
+      });
+    });

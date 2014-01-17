@@ -1,7 +1,15 @@
 doctype 5
 head
   meta charset="utf-8"
-  meta name="viewport" content="width=1024, user-scalable=no"
-  title Kitchen
+  title Mobile Kitchen Classroom
+  meta name="HandheldFriendly" content="True"
+  meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  meta name="apple-mobile-web-app-capable" content="yes" 
+  meta name="apple-mobile-web-app-status-bar-style" content="white"
+  link rel="apple-touch-startup-image" href="img/splash.png"
+  meta name="format-detection" content="telephone=no"
+  meta http-equiv="cleartype" content="on"
+  link rel="stylesheet" href="#{@css_path}"
+  script src="#{@js_modernizr_path}"
 body
   ==yield

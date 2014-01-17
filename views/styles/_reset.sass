@@ -1,0 +1,54 @@
+*,:after,:before
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.button-block
+  font-family: "IS Bold"
+  text-transform: uppercase
+  background: $button_yellow
+  border: none
+  box-shadow: none
+  color: black
+  +px-to-ems(font-size, 11px)
+  font-weight: 400
+  +border-radius(0)
+  text-shadow: none
+  width: 168px
+  margin: 8px auto 0 auto
+  padding-top: 8px
+  padding-bottom: 10px
+
+  &:active
+    background: $button_yellow
+    padding-top: 8px
+    padding-bottom: 10px
+
+//add header and content animation
+
+header.bar-title, header.bar-title .tap-to-close.visible
+  @include transition-property(left,right)
+  @include transition-duration(0.25s)
+  @include transition-timing-function(ease-out)
+
+  &.open-left
+    left: $aside_w
+    right: -$aside_w
+
+  &.open-right
+    left: -$aside_w
+    right: $aside_w
+
+article.content
+  @include transition-property(margin-left)
+  @include transition-duration(0.25s)
+  @include transition-timing-function(ease-out)
+
+  &.open-left
+    margin-left: $aside_w
+
+  &.open-right
+    margin-left: -$aside_w
+
+// Hide Thinglink URLs
+div.tlFirstseen
+  display: none !important
