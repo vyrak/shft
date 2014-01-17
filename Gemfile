@@ -4,8 +4,8 @@ ruby '1.9.3'
 
 gem 'puma'
 gem 'sinatra', :require => 'sinatra/base'
-gem 'sinatra-websocket'
 gem 'slim'
+gem 'sass'
 
 group :development do
   gem 'dotenv'

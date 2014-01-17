@@ -7,6 +7,7 @@ APP_ROOT = File.dirname(__FILE__)
 
 Sinatra::Base.tap do |b|
   b.set :root, APP_ROOT
+  b.set :raise_errors, true
   b.set :server, 'puma'
   b.set :sockets, []
   b.set :views, File.join(APP_ROOT, '/views')

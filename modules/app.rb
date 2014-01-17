@@ -1,26 +1,18 @@
 class App < Sinatra::Base
   get '/' do
-    content_type 'json'
-
-    { test: 'success' }.to_json
+    slim :index
   end
 
-  get '/sock' do
-    return slim :'sock' if !request.websocket?
-    request.websocket do |ws|
-      ws.onopen do
-        #ws.send 'Hello World!'
-        #settings.sockets << ws
-      end
-
-      ws.onmessage do |msg|
-        #EM.next_tick { settings.sockets.each{ |s| s.send msg } }
-      end
-
-      ws.onclose do
-        p 'closed socket'
-        settings.sockets.delete ws
-      end
+  get '/css/*.css' do |file|
+    content_type :css
+    begin
+      scss file.to_sym,
+        syntax: :scss,
+        line_numbers: true,
+        style: :expanded,
+        load_paths: ['views/styles']
+    rescue Errno::ENOENT
+      status 404
     end
   end
 end
