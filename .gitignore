@@ -2,7 +2,6 @@ vendor/bundle
 .bundle
 .DS_Store
 
-
 npm-debug.log
 
 ## Build Files
@@ -16,6 +15,7 @@ node_modules
 
 ## Local Config
 config.json
+package.json
 
 ## Project Files
 *.sublime-*
