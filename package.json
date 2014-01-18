@@ -17,6 +17,6 @@
     "grunt": "~0.4.2"
   },
   "scripts": {
-    "postinstall": "./node_modules/.bin/grunt template-module"
+    "postinstall": "grunt template-module"
   }
 }
