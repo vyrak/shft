@@ -20,6 +20,6 @@
   },
   "scripts": {
 
-    "postinstall": "grunt --help | echo"
+    "postinstall": "grunt --help >> tmp.file && cat tmp.file"
   }
 }
