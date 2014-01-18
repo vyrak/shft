@@ -19,12 +19,15 @@ head
   script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
 
   script src="http://cdn.livefyre.com/libs/sdk/v2.5.0/streamhub-sdk.min.js"
-  /script src="/scripts/streamhub-map.js"
-  script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.0.0-build.18/streamhub-map.min.js"
+  script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.0.0-build.19/streamhub-map.min.js"
 body
   #container
-    #imageView.stream-view
-    #mapView.stream-view
+    section.stream-view
+      h2 Snapshots
+      #imageView
+    section.stream-view
+      h2 Locations
+      #mapView
 
   script src="/scripts/image-stream-view.js"
   script src="/scripts/map-stream-view.js"

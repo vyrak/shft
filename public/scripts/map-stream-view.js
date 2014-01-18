@@ -1,7 +1,6 @@
 Livefyre.require([
   'streamhub-sdk/collection',
-  //'streamhub-map',
-  'streamhub-sdk/content/views/content-list-view'
+  'streamhub-map'
 ], function(Collection, ContentMapView) {
   var collection, view;
 
