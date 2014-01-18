@@ -10,10 +10,9 @@ head
   meta http-equiv="cleartype" content="on"
 
   link rel="apple-touch-startup-image" href="img/splash.png"
-  link rel="stylesheet" href="#{@css_path}"
+  link rel="stylesheet" href="/css/dashboard.css"
   link rel="stylesheet" href="http://cdn.livefyre.com/libs/sdk/v2.5.0/streamhub-sdk.min.css"
   link rel="stylesheet" type="text/css" href="https://d1yh3rcoys40v1.cloudfront.net/media/Y2xpZW50LXNvbHV0aW9ucy5lcC5saXZlZnlyZS5jb20=/css/sp.css" media="all"
-  link rel="stylesheet" type="text/css" href="http://zor.fyre.co/wjs/v3.0.1389921423/css/livefyre_main.css" media="all"
 
   script src="#{@js_modernizr_path}"
 
@@ -24,6 +23,8 @@ head
   script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.0.0-build.18/streamhub-map.min.js"
 body
   #container
-    #mapView
+    #imageView.stream-view
+    #mapView.stream-view
 
-  script src="/scripts/map.js"
+  script src="/scripts/image-stream-view.js"
+  script src="/scripts/map-stream-view.js"

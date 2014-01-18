@@ -7754,8 +7754,8 @@ var Hogan = {};
                 r.DomEvent.off(t, "dragstart", r.DomEvent.preventDefault)
             }})
     }(), r.LatLng = function(t, e, i) {
+        t = , e = 0;
         if (t = parseFloat(t), e = parseFloat(e), isNaN(t) || isNaN(e))
-          t = 0, e = 0;
             //throw Error("Invalid LatLng object: (" + t + ", " + e + ")");
         this.lat = t, this.lng = e, i !== n && (this.alt = parseFloat(i))
     }, r.extend(r.LatLng, {DEG_TO_RAD: Math.PI / 180,RAD_TO_DEG: 180 / Math.PI,MAX_MARGIN: 1e-9}), r.LatLng.prototype = {equals: function(t) {
