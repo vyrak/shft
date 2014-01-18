@@ -20,6 +20,7 @@
 
     getFooterView: ->
       footerView = new Show.Footer
+        model: App.request "points:entity"
 
       @listenTo footerView, "facebook:clicked", (args) ->
         App.vent.trigger "aside:facebook:clicked", args.view

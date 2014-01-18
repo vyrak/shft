@@ -39,7 +39,7 @@
       new List.Background
 
     getNewsListView: ->
-      sectionsView = new List.PageList
+      sectionsView = new List.NewsList
         collection: @news
 
       # @listenTo sectionsView, "childview:item:clicked", (args) ->
