@@ -36,7 +36,7 @@
       App.execute "aside:swipe:right"
 
     serializeData: ->
-      data = {}
+      data = @model.toJSON()
 
       data
     triggers: ->
