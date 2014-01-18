@@ -1,6 +1,6 @@
 namespace :assets do
   task :precompile do
-    sh "npm i -S grunt grunt-cli"
+    p "sblajsoifjawjf: #{sh("node --version")}"
   end
 end
 
