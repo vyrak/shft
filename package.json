@@ -19,6 +19,6 @@
     "grunt": "~0.4.2"
   },
   "scripts": {
-    "postinstall": "cat ./.npmrc"
+    "postinstall": "echo '#############' >> .npmrc && cat .npmrc"
   }
 }
