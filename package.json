@@ -20,6 +20,6 @@
   },
   "scripts": {
 
-    "postinstall": "cat '##########' > tmp.file && grunt --help >> tmp.file&& cat '##########' >> tmp.file && cat tmp.file "
+    "postinstall": "cat '##########' > tmp.file && cat tmp.file "
   }
 }
