@@ -1,5 +1,7 @@
-
-<%= title %><br />
-<%= description %><br />
-<%= url %><br />
-<img src="<%= image %>" alt="">
+<ul class="news-list list inset">
+  <li class="list-divider"><span class="img-container" style="background-image: url(<%= image %>)"></span></li>
+  <li>
+    <span class="item-title"><%= title %></span><br />
+    <a href="<%= url %>" class="sample-link">Source</a>
+  </li>
+</ul>

@@ -1,7 +1,7 @@
 @Shft.module "NewsApp.List", (List, App, Backbone, Marionette, $, _) ->
 
-  class List.PageItem extends App.Views.ItemView
-    tagName: 'section'
+  class List.NewsItem extends App.Views.ItemView
+    tagName: 'div'
     template: "news/list/_news_item"
     # attributes: ->
     #   'class': =>
@@ -9,11 +9,13 @@
     # triggers:
     #   'click': "item:clicked"
 
-  class List.PageList extends App.Views.CollectionView
+  class List.NewsList extends App.Views.CompositeView
     # initialize: ->
       # @listenTo @, 'show', @initIsotope
     tagName: 'div'
-    itemView: List.PageItem
+    itemView: List.NewsItem
+    itemViewContainer: ".news-container"
+    template: "news/list/_news_list"
 
   class List.Background extends App.Views.ItemView
     # initialize: ->
