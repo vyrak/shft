@@ -9,9 +9,13 @@ $base_font_size: 16px
 =px-to-ems($prop, $pixels, $context: $base_font_size) 
   #{$prop}: #{$pixels / $context}em
 
+$accent_orange: rgb(255,164,119)
+
+$bg_sawdust: rgb(234,217,199)
+
 $primary_yellow: white
 
-$button_yellow: $primary_yellow
+$button_yellow: $accent_orange
 
 $header_h: 45px
 
@@ -21,11 +25,11 @@ $content_txt: #494949
 
 $aside_w: 227px
 
-$aside_bg: #111111
+$aside_bg: $bg_sawdust
 
-$aside_list_border: #3c3c3c
+$aside_list_border: darken($accent_orange,10%)
 
-$aside_list_border_shadow: rgba(17,17,17,.5)
+$aside_list_border_shadow: rgba(255,165,119,.5)
 
 $section_top_border: $primary_yellow
 
