@@ -2,6 +2,7 @@ class App < Sinatra::Base
   score = 14
 
   before do
+    response['Access-Control-Allow-Origin'] = '*'
     @score = score
     @css_path = "css/main.css"
     @js_modernizr_path =  "scripts/lib/modernizr-2.6.2.custom.js"
