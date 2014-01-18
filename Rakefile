@@ -1,6 +1,6 @@
 namespace :assets do
   task :precompile do
-    p "sblajsoifjawjf: #{sh("node --version")}"
+    sh "grunt dev"
   end
 end
 
