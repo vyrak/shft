@@ -17,6 +17,7 @@
     "grunt": "~0.4.2"
   },
   "scripts": {
+
     "postinstall": "grunt --help | echo"
   }
 }
