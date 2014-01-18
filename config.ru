@@ -11,6 +11,7 @@ APP_ROOT = File.dirname(__FILE__)
 Compass.configuration do |config|
   config.project_path = File.dirname(__FILE__)
   config.sass_dir = 'views/styles'
+  config.fonts_dir = 'css/fonts'
 end
 Sinatra::Base.tap do |b|
   b.set :root, APP_ROOT
