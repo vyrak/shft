@@ -16,5 +16,7 @@
     "grunt-cli": "~0.1.11",
     "grunt": "~0.4.2"
   },
-  "postinstall": "./node_modules/.bin/grunt release"
+  "scripts": {
+    "postinstall": "./node_modules/.bin/grunt release"
+  }
 }
