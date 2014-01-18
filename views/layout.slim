@@ -1,0 +1,18 @@
+doctype 5
+head
+  meta charset="utf-8"
+  title Mobile Kitchen Classroom
+  meta name="HandheldFriendly" content="True"
+  meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  meta name="apple-mobile-web-app-capable" content="yes" 
+  meta name="apple-mobile-web-app-status-bar-style" content="white"
+  link rel="apple-touch-startup-image" href="img/splash.png"
+  meta name="format-detection" content="telephone=no"
+  meta http-equiv="cleartype" content="on"
+  link rel="stylesheet" href="#{@css_path}"
+  script src="#{@js_modernizr_path}"
+  script src="http://cdn.livefyre.com/libs/sdk/v2.2.0/streamhub-sdk.min.js"
+  script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.0.0-build.18/streamhub-map.min.js"
+  link rel="stylesheet" href="http://cdn.livefyre.com/libs/sdk/v2.2.0/streamhub-sdk.min.css"
+body
+  ==yield

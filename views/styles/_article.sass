@@ -1,0 +1,193 @@
+article.content
+  width: 100%
+  position: relative
+  top: auto
+  left: auto
+  bottom: auto
+  right: auto
+  z-index: 2
+
+  section
+    padding-bottom: 37px
+
+  section.top
+    padding-bottom: 0
+
+  .headline
+    font-family: "IS Bold Comp"
+    text-transform: uppercase
+    font-weight: 400
+    text-align: center
+
+  .hero,.thumb
+    overflow: hidden
+    position: relative
+
+    background-size: cover
+    background-position: center top
+    background-color: black
+
+    .headline
+      color: white
+      position: absolute
+      left: 0
+      width: 100%
+      +text-shadow(0px 0px 20px rgba(0, 0, 0, 0.4))
+
+    .emphasis
+      top: 317px
+      +px-to-ems(font-size, 68px)
+
+    .headline-small
+      top: 376px
+      +px-to-ems(font-size, 35px)
+
+    &.headline-inverted .emphasis
+      top: 342px
+    &.headline-inverted .headline-small
+      top: 317px
+
+  .thumb
+    $thumb_w: 350px
+    $thumb_height: 239px
+    width: 100%
+    max-height: $thumb_height
+    position: relative
+
+    .centerer
+      //nested div to center images vertically.
+      display: block
+      line-height: 0
+      margin: 0 auto
+      max-height: $thumb_height
+      text-align: center
+      max-width: $thumb_w
+
+    img
+      width: 100%
+
+  .hero
+    $hero_height: 455px
+    height: $hero_height
+
+    img
+      height: $hero_height
+
+
+  .headline-section
+    padding-top: 25px
+    color: black
+    +px-to-ems(font-size, 41px)
+    +px-to-ems(line-height, 35px, 41px)
+
+    &.smaller
+      padding-top: 0
+      +px-to-ems(font-size, 28px)
+      +px-to-ems(line-height, 25px, 28px)
+
+  .video
+    position: relative
+    height: 0
+    // intrinsic ratio
+    padding-bottom: 56.25%
+    padding-top: 25px
+    margin: 10px
+
+  .video iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .main,.top
+
+  .hero-content
+    padding-top: 10px
+
+  .arrow-box
+    position: relative
+    background: #ffffff
+
+  .arrow-box:after
+    bottom: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(255,255,255,0)
+    border-bottom-color: #ffffff
+    border-width: 9px
+    margin-left: -9px
+
+  .body-text
+    text-align: center
+    color: $content_txt
+    font-family: Arial, sans-serif
+    +px-to-ems(font-size, 15px)
+    +px-to-ems(line-height, 21px, 15px)
+    padding: 14px 18px
+
+  .home-region
+    height: 480px - $header_h 
+    .logo
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-left: -83px
+      margin-top: -83px
+      img
+        display: block
+        width: 166px
+        height: 166px
+
+    .about-image
+      position: absolute
+      top: 185px
+      left: 222px
+      img
+        width: 60px
+        height: 66px
+
+    .news-image
+      position: absolute
+      top: 101px
+      left: 138px
+      img
+        width: 44px
+        height: 57px
+      
+    .categories-image
+      position: absolute
+      top: 279px
+      left: 128px
+      img
+        width: 63px
+        height: 61px
+
+    .text-logo
+      position: absolute
+      top: 350px
+      left: 156px
+      img
+        width: 129px
+        height: 68px
+    
+    .mkc-social
+      position: absolute
+      top: 25px
+      left: 50%
+      margin-left: -70px
+      img
+        width: 141px
+        height: 39px
+
+
+.pages section, .hero-content
+  border-top: 5px solid $section_top_border
+
+.homepage-main .hero, .top .hero-video
+  border-bottom: 5px solid $section_top_border

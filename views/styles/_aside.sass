@@ -1,0 +1,96 @@
+body > aside
+  width: $aside_w
+  background: $aside_bg
+  position: fixed
+  z-index: 1
+  top: 0
+  bottom: 0
+  display: none
+  color: $aside_list_txt
+  text-transform: uppercase
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+
+  &.visible
+    display: block
+
+  padding: 12px 20px
+
+  .list
+    background-color: transparent
+    border-top: 1px solid $aside_list_border
+
+    li
+      background-color: transparent
+      border-top: 1px solid $aside_list_border_shadow
+      border-bottom: 1px solid $aside_list_border
+      padding: 10px 4px
+      -webkit-transform: translateZ(0)
+
+    li > a:not([class*="button"])
+      font-family: "IS Bold"
+      font-weight: 400
+      +px-to-ems(font-size, 16px)
+      margin: -10px -4px
+
+    .icon-bullet
+      $icb_padding: 12px
+      width: 17px + $icb_padding
+      padding-right: $icb_padding
+      display: inline-block
+      vertical-align: middle
+      img
+        max-width: 100%
+
+  .icon-list
+    list-style: none
+    -webkit-transform: translateZ(0)
+
+    li
+      padding-top: 20px
+
+    .icon-bullet
+      float: left
+      width: 15px
+      display: block
+      img
+        max-width: 100%
+
+    .main
+      display: block
+      padding-left: 25px
+      font-family: "IS Bold"
+      font-weight: 400
+      +px-to-ems(font-size, 14px)
+
+    .highlight
+      color: $aside_list_highlight
+
+  .button-block
+    color: $aside_button_txt
+    +aside_button_bg()
+    margin-left: 0
+    margin-right: 0
+    +px-to-ems(font-size, 14px)
+    width: 162px
+    -webkit-transform: translateZ(0)
+
+    &:active
+      +aside_button_bg()
+
+  hr
+    margin-top: 40px
+    margin-bottom: 32px
+    padding: 0
+    border-top: 1px solid $aside_list_border
+    border-bottom: 1px solid $aside_list_border_shadow
+    border-left: none
+    border-right: none
+
+#aside-left
+  left: 0
+  +box-shadow(inset -3px 3px 8px 0px rgba(0,0,0,.25))
+
+#aside-right
+  right: 0
+  +box-shadow(inset 3px 3px 8px 0px rgba(0,0,0,.25))

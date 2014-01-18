@@ -1,0 +1,91 @@
+*,:after,:before
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.button-block
+  font-family: "IS Bold"
+  text-transform: uppercase
+  background: $button_yellow
+  border: none
+  box-shadow: none
+  color: black
+  +px-to-ems(font-size, 11px)
+  font-weight: 400
+  +border-radius(0)
+  text-shadow: none
+  width: 168px
+  margin: 8px auto 0 auto
+  padding-top: 8px
+  padding-bottom: 10px
+
+  &:active
+    background: $button_yellow
+    padding-top: 8px
+    padding-bottom: 10px
+
+//add header and content animation
+
+header.bar-title, header.bar-title .tap-to-close.visible
+  @include transition-property(left,right)
+  @include transition-duration(0.25s)
+  @include transition-timing-function(ease-out)
+
+  &.open-left
+    left: $aside_w
+    right: -$aside_w
+
+  &.open-right
+    left: -$aside_w
+    right: $aside_w
+
+.background-embedded
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  z-index: -1
+  width: 100%
+  background-position: left top
+  background-size: 100% auto
+  background-repeat: repeat-y
+
+  &::after
+    content: " "
+    background: rgba(255,255,255,.5)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  &.background-herb
+    background-image: url("/img/background/herb.jpg")
+  &.background-mix
+    background-image: url("/img/background/mix.jpg")
+  &.background-onion
+    background-image: url("/img/background/onion.jpg")
+  &.background-pepper
+    background-image: url("/img/background/pepper.jpg")
+
+.img-header
+  margin: 0 auto
+  width: 100%
+  img
+    max-width: 100%
+article.content
+  @include transition-property(margin-left)
+  @include transition-duration(0.25s)
+  @include transition-timing-function(ease-out)
+
+  &.open-left
+    margin-left: $aside_w
+
+  &.open-right
+    margin-left: -$aside_w
+
+  & > .background-graphic.background-mix
+  & > .background-graphic.background-onion
+  & > .background-graphic.background-pepper
+
+// Hide Thinglink URLs
+div.tlFirstseen
+  display: none !important

@@ -1,0 +1,33 @@
+doctype 5
+head
+  title Mobile Kitchen Classroom
+  meta charset="utf-8"
+  meta name="HandheldFriendly" content="True"
+  meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  meta name="apple-mobile-web-app-capable" content="yes" 
+  meta name="apple-mobile-web-app-status-bar-style" content="white"
+  meta name="format-detection" content="telephone=no"
+  meta http-equiv="cleartype" content="on"
+
+  link rel="apple-touch-startup-image" href="img/splash.png"
+  link rel="stylesheet" href="/css/dashboard.css"
+  link rel="stylesheet" href="http://cdn.livefyre.com/libs/sdk/v2.5.0/streamhub-sdk.min.css"
+  link rel="stylesheet" type="text/css" href="https://d1yh3rcoys40v1.cloudfront.net/media/Y2xpZW50LXNvbHV0aW9ucy5lcC5saXZlZnlyZS5jb20=/css/sp.css" media="all"
+
+  script src="#{@js_modernizr_path}"
+
+  script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+
+  script src="http://cdn.livefyre.com/libs/sdk/v2.5.0/streamhub-sdk.min.js"
+  script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.0.1-build.22/streamhub-map.min.js"
+body
+  #container
+    .stream-view
+      h2 Locations
+      #mapView
+    .stream-view
+      h2 Snapshots
+      #imageView
+
+  script src="/scripts/map-stream-view.js"
+  script src="/scripts/image-stream-view.js"

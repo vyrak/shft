@@ -1,26 +1,37 @@
 class App < Sinatra::Base
-  get '/' do
-    content_type 'json'
+  score = 14
 
-    { test: 'success' }.to_json
+  before do
+    @score = score
+    @css_path = "css/main.css"
+    @js_modernizr_path =  "scripts/lib/modernizr-2.6.2.custom.js"
+    @js_zepto_path =  "scripts/lib/zepto.js"
+    @js_path =  "scripts/shft.js"
+    @js_env =  "development"
+    @js_url =  "http://0.0.0.0:9000/"
   end
 
-  get '/sock' do
-    return slim :'sock' if !request.websocket?
-    request.websocket do |ws|
-      ws.onopen do
-        #ws.send 'Hello World!'
-        #settings.sockets << ws
-      end
+  get '/' do
+    slim :index
+  end
 
-      ws.onmessage do |msg|
-        #EM.next_tick { settings.sockets.each{ |s| s.send msg } }
-      end
+  get '/dashboard' do
+    slim :dashboard, layout: false
+  end
 
-      ws.onclose do
-        p 'closed socket'
-        settings.sockets.delete ws
-      end
+  get '/css/*.css' do |file|
+    content_type :css
+    begin
+      sass :"styles/#{file}",
+        syntax: :sass,
+        line_numbers: true,
+        style: :expanded
     end
+  end
+
+  post '/scored' do
+    content_type :json
+    score += params[:scored].to_i
+    { score: score }.to_json
   end
 end
