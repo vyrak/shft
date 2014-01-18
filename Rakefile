@@ -1,6 +1,6 @@
 namespace :assets do
   task :precompile do
-    sh "grunt dev"
+    sh "./node_modules/.bin/grunt dev"
   end
 end
 
