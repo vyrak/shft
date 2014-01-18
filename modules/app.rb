@@ -1,4 +1,6 @@
 class App < Sinatra::Base
+  score = 14
+
   before do
     @css_path = "css/main.css"
     @js_modernizr_path =  "scripts/lib/modernizr-2.6.2.custom.js"
@@ -13,6 +15,7 @@ class App < Sinatra::Base
   end
 
   get '/dashboard' do
+    @score = score
     slim :dashboard, layout: false
   end
 
@@ -24,5 +27,11 @@ class App < Sinatra::Base
         line_numbers: true,
         style: :expanded
     end
+  end
+
+  post '/scored' do
+    content_type :json
+    score += params[:scored].to_i
+    { score: score }.to_json
   end
 end
