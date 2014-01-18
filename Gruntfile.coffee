@@ -6,6 +6,7 @@ module.exports = (grunt) ->
       "public/scripts/lib/zepto.min.js"
     ]
     my_build_files: [
+      "public/scripts/lib/popcorn.min.js"
       "public/scripts/lib/zepto.touch.js"
       "public/scripts/lib/lodash.underscore.js"
       "public/scripts/lib/backbone.js"
