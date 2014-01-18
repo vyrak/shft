@@ -2,6 +2,7 @@ class App < Sinatra::Base
   score = 14
 
   before do
+    @score = score
     @css_path = "css/main.css"
     @js_modernizr_path =  "scripts/lib/modernizr-2.6.2.custom.js"
     @js_zepto_path =  "scripts/lib/zepto.js"
@@ -15,7 +16,6 @@ class App < Sinatra::Base
   end
 
   get '/dashboard' do
-    @score = score
     slim :dashboard, layout: false
   end
 
