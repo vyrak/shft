@@ -19,6 +19,6 @@
     "grunt": "~0.4.2"
   },
   "scripts": {
-    "postinstall": "echo '##########' > tmp.file && grunt dev 2>> tmp.file && cat tmp.file"
+    "postinstall": "echo '##########' > tmp.file && grunt dev 2>> tmp.file && echo '##########' >> tmp.file && cat tmp.file"
   }
 }
