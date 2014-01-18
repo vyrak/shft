@@ -1,6 +1,6 @@
 namespace :assets do
   task :precompile do
-    sh "grunt dev"
+    sh "npm i -S grunt grunt-cli"
   end
 end
 
