@@ -10,7 +10,11 @@ Livefyre.require([
     articleId: 'hancock-1389918776435'
   });
   view = new ContentMapView({
-    el: document.getElementById("mapView")
+    el: document.getElementById("mapView"),
+    leafletMapOptions: {
+      center: [40.6457, -111.4951],
+      zoom: 13
+    }
   });
   collection.pipe(view);
 });

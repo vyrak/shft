@@ -1,11 +1,21 @@
-h2
-  margin: 0
+html, body
+  height: 100%
+
 body
   background-color: #ABC
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, "Droid Sans", arial, sans-serif
-.stream-view
-  width: 50%
-  float: left
 
-  > #imageView, > #mapView
-    margin: 0 10px
+h2
+  margin: 0
+
+.stream-view
+  float: left
+  overflow-y: auto
+  width: 50%
+
+#mapView
+  position: absolute
+  width: 45%
+  height: 80%
+
+#listView
