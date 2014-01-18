@@ -25,6 +25,11 @@
     initialize: ->
       @listenTo @, 'swipe:left', @swipeLeft
       @listenTo @, 'swipe:right', @swipeRight
+      @listenTo @, 'show', @initRender
+      @listenTo @model, 'change', @render
+    initRender: ->
+      App.vent.on "footer:refresh", =>
+        @model.set('points', App.request("points:entity").get('points'))
     template: "aside/show/footer"
     tagName: 'div'
 
