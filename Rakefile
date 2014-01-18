@@ -1,6 +1,7 @@
 namespace :assets do
   task :precompile do
-    sh "./node_modules/.bin/grunt dev"
+    cmd = File.join Dir.pwd, "node_modules/.bin/grunt dev"
+    sh cmd
   end
 end
 
