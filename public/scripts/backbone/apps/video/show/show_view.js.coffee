@@ -3,6 +3,7 @@
   class Show.Article extends App.Views.ItemView
     initialize: ->
       @listenTo @, "show", @initPopcorn
+      @listenTo @, "answer:clicked", @updateScore
     initPopcorn: ->
 
       if (!YT?)
@@ -35,9 +36,23 @@
       window.player = undefined
       done = false
 
+    updateScore: ->
+      $.post "/scored",
+        scored: 1
+      , (response) =>
+        App.execute "points:update", JSON.parse(response).score
+        App.vent.trigger "footer:refresh"
+
+      App.navigate "share", trigger: true
+
     template: "video/show/article"
     tagName: 'div'
     serializeData: ->
       data = {}
 
       data
+    triggers: ->
+      if App.isTouch
+        "touchstart .submit-answer": "answer:clicked"
+      else
+        "click .submit-answer": "answer:clicked"
